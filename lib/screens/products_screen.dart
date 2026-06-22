@@ -72,13 +72,23 @@ class _ProductsScreenState extends State<ProductsScreen> {
                       product.id.toString(),
                     ),
                   ),
-                  title: Text(
-                    product.name,
+                  title: Text(product.name),
+                  subtitle: Column(
+                    crossAxisAlignment:
+                        CrossAxisAlignment.start,
+                    children: [
+
+                      Text(
+                        '\$ ${product.price}',
+                      ),
+
+                      Text(
+                        'Creado por: ${product.username}',
+                      ),
+
+                    ],
                   ),
-                  subtitle: Text(
-                    '\$ ${product.price}',
-                  ),
-                ),
+                )
               );
             },
           );
